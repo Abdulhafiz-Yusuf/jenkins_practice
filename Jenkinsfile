@@ -1,12 +1,9 @@
 pipeline{
     agent none
     stages {
-        stage ('test')
+        stage('test')
         steps{
-            script {
-                def myVar = "Hello, World!"
-                echo myVar
-            }
+           echo "Testing Jenkins"
         }
     }
 }
