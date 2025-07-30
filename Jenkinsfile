@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Echo') {
             steps {
-                echo 'Hello from GitHub-triggered pipeline!'
+                echo '2 Hello from GitHub-triggered pipeline!'
             }
         }
     }
