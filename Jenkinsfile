@@ -14,7 +14,7 @@ pipeline {
         stage('Echo') {
             steps {
                 echo '2 Hello from GitHub-triggered pipeline!'                
-                withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
+                withCredentials([usernamePassword(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
                     echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
                     echo "DOCKERHUB_USER: ${DOCKERHUB_USER}"    
                     echo "DOCKER_IMAGE: ${DOCKER_IMAGE}"
